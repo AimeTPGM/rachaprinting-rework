@@ -12,7 +12,7 @@ class AdsSlider extends Component {
             slidesToShow: 1,
             slidesToScroll: 1
         };
-        return (<div className={'ads-container'}>
+        return (<div className={'ads-wrapper'}>
             <Slider {...settings}>
                 <div>
                     <h3>1</h3>

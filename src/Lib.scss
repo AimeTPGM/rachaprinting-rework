@@ -2,7 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 @import "~bulma/css/bulma.css";
 
-$mainColor: #229222;
+$mainColor: #00C300;
 
 body {
     background: $mainColor;
@@ -21,7 +21,7 @@ body {
     color: $mainColor;
 }
 .green-bg {
-    background-image: linear-gradient(#00D200, $mainColor);
+    background-image: linear-gradient(#65EF65, #229222);
     color: white;
     a {
         color: white;
