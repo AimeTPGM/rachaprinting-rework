@@ -17,8 +17,8 @@ class ProductSlider extends Component {
         const products = [{}, {}, {}, {}, {}, {}, {}, {}, {}]
         return (<div className={'wrapper'}>
             <Slider {...settings}>
-                {products.map((value,key) => {
-                    return <div><h3>{key}</h3></div>;
+                {products.map((value) => {
+                    return <div><h3>a</h3></div>;
                 })}
             </Slider>
         </div>);
