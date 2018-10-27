@@ -45,6 +45,17 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+const scssRegex = /\.scss$/;
+
+const getSCSSLoaders = () => {
+  const loaders = [
+    "style-loader", "css-loader", "sass-loader"
+    
+  ];
+
+  return loaders;
+}
+
 
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -339,11 +350,16 @@ module.exports = {
               importLoaders: 1,
               sourceMap: shouldUseSourceMap,
             }),
+            
             // Don't consider CSS imports dead code even if the
             // containing package claims to have no side effects.
             // Remove this when webpack adds a warning or an error for this.
             // See https://github.com/webpack/webpack/issues/6571
             sideEffects: true,
+          },
+          {
+            test: scssRegex,
+            use: getSCSSLoaders(),
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
           // using the extension .module.css
