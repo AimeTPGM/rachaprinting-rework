@@ -46,6 +46,7 @@ class Footer extends Component {
                         })}
                     </div>)
             })}
+            <div>©2017 Racha Printing Co., Ltd. All Rights Reserved.</div>
             
         </div>);
     }
