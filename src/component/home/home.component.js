@@ -11,7 +11,6 @@ class Home extends Component {
             <AdsSlider />
             <ProductSlider />
             <HowTo />
-            <Footer />
         </div>
     );
   }

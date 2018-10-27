@@ -5,7 +5,6 @@ class ContactUs extends Component {
     render () {
         return (<div className={'white-bg'}>
             this is contact us
-            <Footer />
         </div>)
     }
 }
