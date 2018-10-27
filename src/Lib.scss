@@ -1,0 +1,15 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "~bulma/css/bulma.css";
+
+body {
+    background: #00C300;
+}
+.wrapper {
+    width: 70vw;
+    margin: auto;
+    padding: 30px 0 30px 0;
+    .footer {
+        padding: 50px 0 20px 0;
+    }
+}
