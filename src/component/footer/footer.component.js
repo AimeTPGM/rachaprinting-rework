@@ -1,34 +1,41 @@
 import React, { Component } from 'react';
+import './footer.component.scss'
 
 class Footer extends Component {
 
     renderItemLink(item) {
-        return (<div><a href={item.itemLink}>{item.itemName}</a></div>);
+        return (<div className={'item'}><a href={item.itemLink}>{item.itemName}</a></div>);
     }
 
     renderItemWithoutLink(item) {
-        return (<div>{item.itemName}</div>);
+        return (<div className={'item'}>{item.itemName}</div>);
     }
     render () {
         const footerData = [
             {
                 header: 'About Us',
                 items: [
-                    { itemName: 'เกี่ยวกับราชาปริ้นติ้ง', itemLink: '/AboutUs' }
+                    { itemName: 'ราชาการพิมพ์ ให้บริการการพิมพ์มา มากกว่า 15 ปี ทั้งยังผลิต และจัดจำหน่าย ภาชนะใส่อาหารและเครื่องดื่ม สำหรับค้าปลีกตามที่ท่านต้องการ และยังมีลวดลายสินค้า ให้ท่านเลือกมากมาย รับพิมพ์งานด่วน บริการออกแบบสื่อสิ่งพิมพ์และรับพิมพ์งานพิมพ์ทุกชนิด'}
                 ]
             },
             {
                 header: 'Link',
                 items: [
-                    { itemName: 'สั่งซื้อกับเราอย่างไร?', itemLink: '/Howto' }
+                    { itemName: 'เกี่ยวกับเรา', itemLink: '/contact' },
+                    { itemName: 'สั่งซื้อกับเราอย่างไร?', itemLink: '/howto' },
+                    { itemName: 'คำถามที่พบบ่อย', itemLink: '/faq' }
+
                 ]
             },
             {
                 header: 'Contact Us',
                 items: [
-                    { itemName: 'โทรศัพท์' },
-                    { itemName: 'email' },
-                    { itemName: 'ที่อยู่' },
+                    { itemName: '02-266-3738' },
+                    { itemName: '02-266-3739' },
+                    { itemName: '02-266-3740' },
+                    { itemName: 'fax 02-234-8319' },
+                    { itemName: 'rachagroup@email.com' },
+                    { itemName: '204/6-7 ถ.สุรวงศ์ แขวงสี่พระยา เขตบางรัก กทม.' },
                     { itemName: 'facebook' },
                     { itemName: 'line' },
                     { itemName: 'ig' },
@@ -37,18 +44,26 @@ class Footer extends Component {
             }
 
         ]
-        return (<div className={'wrapper'}>
-            {footerData.map( data => {
-                return (<div className={'column'}>
-                        <div className={'header'}>{data.header}</div>
-                        {data.items.map(item => {
-                            return !!item.itemLink ? this.renderItemLink(item) : this.renderItemWithoutLink(item)
+        return (
+            <div className={'green-bg'}>
+                <div className={'wrapper'}>
+                    <div className={'link-wrapper'}> 
+                        {footerData.map( data => {
+                            return (<div className={'column'}>
+                                    <div className={'header'}>{data.header}</div>
+                                    <div className={'item-wrapper'}> 
+                                        {data.items.map(item => {
+                                            return !!item.itemLink ? this.renderItemLink(item) : this.renderItemWithoutLink(item)
+                                        })}
+                                    </div>
+                                </div>)
                         })}
-                    </div>)
-            })}
-            <div>©2017 Racha Printing Co., Ltd. All Rights Reserved.</div>
-            
-        </div>);
+                    </div>
+                    <div className={'license-wrapper'}>{'©2017 Racha Printing Co., Ltd. All Rights Reserved.'}</div>
+                    
+                </div>
+            </div>
+        );
     }
 }
 
