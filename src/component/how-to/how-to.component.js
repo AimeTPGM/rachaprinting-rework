@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class HowTo extends Component {
     render () {
-        return (<div>a</div>);
+        return (<div className={'white-bg'}>this is howto</div>);
     }
 }
 
