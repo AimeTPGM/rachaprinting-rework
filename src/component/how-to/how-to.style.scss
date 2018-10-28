@@ -1,0 +1,23 @@
+.step-wrapper {
+    display: flex;
+    padding: 30px 0 30px 0;
+    .index {
+        font-size: 3em;
+        text-align: center;
+        width: 40%;
+        line-height: 3em;
+        background: #00C300;
+        color: white;
+    }
+    .content-wrapper {
+        text-align: left;
+        width: 60%;
+        border: solid 1px #00C300;
+        padding: 20px;
+        .header {
+            font-size: 2em;
+            padding: 0 0 20px 0;
+        }
+        
+    }
+}
