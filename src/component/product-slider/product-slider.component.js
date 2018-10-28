@@ -19,6 +19,7 @@ class ProductSlider extends Component {
         return (
             <div className={'white-bg'}>
                 <div className={'wrapper'}>
+                    <div class={'header'}>ผลิตภัณฑ์ของราชาการพิมพ์</div>
                     <Slider {...settings}>
                         {products.map((value,key) => {
                             return <div>{this.renderImg(key+1)}</div>;
