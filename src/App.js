@@ -11,6 +11,7 @@ import Footer from './component/footer/footer.component';
 import FAQ from './component/faq/faq.component';
 import firebase from 'firebase';
 import Order from './component/order/order.component';
+import Auth from './component/shared/services/auth';
 
 class App extends Component {
   constructor(props){
@@ -25,6 +26,7 @@ class App extends Component {
     };
     firebase.initializeApp(config);
   }
+  
   render() {
     return (
       <Router>
