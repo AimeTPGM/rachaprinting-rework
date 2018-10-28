@@ -53,7 +53,7 @@ class Navbar extends Component {
                         <a className={'navbar-item custom-menu-item'} href={'/'}>
                             หน้าแรก
                         </a>
-                        <a className={'navbar-item custom-menu-item'} href={'/'}>
+                        <a className={'navbar-item custom-menu-item'} href={'/howto'}>
                             วิธีการสั่งซื้อ
                         </a>
                         <a className={'navbar-item custom-menu-item'} href={'/catalog'}>
