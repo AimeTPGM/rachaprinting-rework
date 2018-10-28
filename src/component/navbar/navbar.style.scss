@@ -1,1 +1,40 @@
-@import 'bulma/bulma';
+#navMenu{
+    z-index: 1000 !important;
+}
+
+.is-active{
+    display: block;
+}
+
+.is-hidden {
+    display: none;
+}
+
+#navMenu {
+    background: #00C300;
+    a:hover {
+        background: #00C300;
+        color: yellow;
+        font-weight: bold;
+    }
+}
+
+.custom-menu-item {
+    background: #00C300;
+    color: white;
+}
+
+.custom-button {
+    background: #00C300;
+    border: solid 1px white;
+    color: white;
+}
+.custom-button:hover {
+    background: #00C300;
+    border: solid 1px yellow;
+    color: yellow;
+}
+
+.custom-burger {
+    color: white;
+}

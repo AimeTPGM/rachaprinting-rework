@@ -1,61 +1,52 @@
 import React, { Component } from 'react';
-
+import './navbar.style.scss'
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.navMenu =  React.createRef();
+    }
+    toggleDropDown() {
+        this.refs.navMenu.classList.toggle('is-active')
+    }
     render() {
         return (
             <div>
-                <nav class="navbar" role="navigation" aria-label="main navigation">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="https://bulma.io">
+                <nav className={'navbar simple-green-bg'} role={'navigation'} aria-label={'main navigation'}>
+                    <div className={'navbar-brand'}>
+                        <a className={'navbar-item'} href={'https://bulma.io'}>
                         
                         </a>
-
-                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
+                        
+                        <a role={'button'} className={'navbar-burger burger'} aria-label={'menu'} aria-expanded={'false'} data-target={'navbarContent'} onClick={() => this.toggleDropDown()}>
+                            <span className={'custom-burger'} aria-hidden={'true'}></span>
+                            <span className={'custom-burger'} aria-hidden={'true'}></span>
+                            <span className={'custom-burger'} aria-hidden={'true'}></span>
                         </a>
                     </div>
 
-                    <div id="navbarBasicExample" class="navbar-menu">
-                        <div class="navbar-start">
-                        <a class="navbar-item" href={'/'}>
-                            Home
+                    <div id={'navMenu'} className={'navbar-menu'} ref={'navMenu'}>
+                        <div className={'navbar-start'}>
+                        <a className={'navbar-item custom-menu-item'} href={'/'}>
+                            หน้าแรก
                         </a>
-
-                        <a class="navbar-item">
-                            Documentation
+                        <a className={'navbar-item custom-menu-item'} href={'/'}>
+                            วิธีการสั่งซื้อ
                         </a>
-
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
-                            More
-                            </a>
-
-                            <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                About
-                            </a>
-                            <a class="navbar-item">
-                                Jobs
-                            </a>
-                            <a class="navbar-item">
-                                Contact
-                            </a>
-                            <a class="navbar-item">
-                                Report an issue
-                            </a>
-                            </div>
-                        </div>
+                        <a className={'navbar-item custom-menu-item'} href={'/'}>
+                            สั่งซื้อสินค้า
+                        </a>
+                        <a className={'navbar-item custom-menu-item'} href={'/contact'}>
+                            ติดต่อเรา
+                        </a>
                         </div>
 
-                        <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                            <a class="button is-primary">
-                                <strong>Sign up</strong>
+                        <div className={'navbar-end'}>
+                        <div className={'navbar-item'}>
+                            <div className={'buttons'}>
+                            <a className={'button custom-button'}>
+                                Sign up
                             </a>
-                            <a class="button is-light">
+                            <a className={'button custom-button'}>
                                 Log in
                             </a>
                             </div>
