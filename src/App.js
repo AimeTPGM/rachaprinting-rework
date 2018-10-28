@@ -12,6 +12,7 @@ import FAQ from './component/faq/faq.component';
 import firebase from 'firebase';
 import Order from './component/order/order.component';
 import HowTo from './component/how-to/how-to.component';
+import PaymentMethodInfo from './component/payment-method/payment-method.component';
 
 class App extends Component {
   constructor(props){
@@ -38,6 +39,7 @@ class App extends Component {
           <Route exact path="/faq" component={FAQ} />
           <Route path="/order" component={Order} />
           <Route path="/howto" component={HowTo} />
+          <Route path="/paymentmethod" component={PaymentMethodInfo} />
           <Footer />
         </div>
       </Router>

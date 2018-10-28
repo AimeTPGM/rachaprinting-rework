@@ -59,6 +59,9 @@ class Navbar extends Component {
                         <a className={'navbar-item custom-menu-item'} href={'/catalog'}>
                             สั่งซื้อสินค้า
                         </a>
+                        <a className={'navbar-item custom-menu-item'} href={'/paymentmethod'}>
+                            ช่องทางการชำระเงิน
+                        </a>
                         <a className={'navbar-item custom-menu-item'} href={'/contact'}>
                             ติดต่อเรา
                         </a>
@@ -75,10 +78,10 @@ class Navbar extends Component {
                         </div>
                     </div>
                 </nav>
-                <LoginPanel show={this.state.showLogin} login={this.login} logout={this.logout} user={this.state.user} />
+                <div className={'login-panel-wrapper'}>
+                    <LoginPanel show={this.state.showLogin} login={this.login} logout={this.logout} user={this.state.user} />
+                </div>
             </div>
-            
-
         );
     }
 }
