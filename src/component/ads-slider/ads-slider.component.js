@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import './ads-slider.style.scss'
+import Utils from '../shared/services/util';
 
 class AdsSlider extends Component {
-    
+    renderImg(id) {
+        return (<img src={Utils.getLeaderboardBannerImg('leaderBoard' + id)}></img>);
+    }
     render () {
         const settings = {
             dots: true,
@@ -12,14 +15,13 @@ class AdsSlider extends Component {
             slidesToShow: 1,
             slidesToScroll: 1
         };
-        return (<div className={'ads-wrapper'}>
+        const leaderBoards = [ {}, {}, {}, {}, {}]
+        return (<div className={'ads-wrapper white-bg'}>
             <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
+                {leaderBoards.map((value,key) => {
+                   return <div>{this.renderImg(key+1)}</div>;
+                })}
+                
             </Slider>
         </div>);
     }
