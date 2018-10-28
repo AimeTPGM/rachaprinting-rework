@@ -75,10 +75,10 @@ class Navbar extends Component {
                         </div>
                     </div>
                 </nav>
-                <LoginPanel show={this.state.showLogin} login={this.login} logout={this.logout} user={this.state.user} />
+                <div className={'login-panel-wrapper'}>
+                    <LoginPanel show={this.state.showLogin} login={this.login} logout={this.logout} user={this.state.user} />
+                </div>
             </div>
-            
-
         );
     }
 }
