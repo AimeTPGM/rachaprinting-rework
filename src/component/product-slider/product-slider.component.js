@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Utils from '../shared/services/util';
+import Product from '../shared/services/product';
 import './product-slider.style.scss';
 class ProductSlider extends Component {
     renderImg(id) {
@@ -16,7 +17,7 @@ class ProductSlider extends Component {
             rows: 2,
             slidesPerRow: 4
         };
-        const products = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {},{}, {}, {}, {}, {}, {}, {}, {}, {}]
+        const products = Product.getProducts();
         return (
             <div className={''}>
                 <div className={'wrapper'}>
