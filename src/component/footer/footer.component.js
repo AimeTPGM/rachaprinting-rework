@@ -22,6 +22,7 @@ class Footer extends Component {
                 header: 'Link',
                 items: [
                     { itemName: 'เกี่ยวกับเรา', itemLink: '/contact' },
+                    { itemName: 'แคตาล็อกสินค้า', itemLink: '/catalog'},
                     { itemName: 'สั่งซื้อกับเราอย่างไร?', itemLink: '/howto' },
                     { itemName: 'คำถามที่พบบ่อย', itemLink: '/faq' }
 
