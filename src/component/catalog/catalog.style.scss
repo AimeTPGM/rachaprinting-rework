@@ -1,0 +1,11 @@
+.catalog-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .catalog-item {
+        padding: 50px;
+        flex: 1 0 21%;
+        img {
+            margin: auto;
+        }
+    }
+}
