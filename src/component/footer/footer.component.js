@@ -48,11 +48,11 @@ class Footer extends Component {
             <div className={'green-bg'}>
                 <div className={'wrapper'}>
                     <div className={'link-wrapper'}> 
-                        {footerData.map( data => {
+                        {footerData.map( (data,key) => {
                             return (<div className={'column'}>
                                     <div className={'header'}>{data.header}</div>
                                     <div className={'item-wrapper'}> 
-                                        {data.items.map(item => {
+                                        {data.items.map((item,key) => {
                                             return !!item.itemLink ? this.renderItemLink(item) : this.renderItemWithoutLink(item)
                                         })}
                                     </div>
