@@ -59,6 +59,9 @@ class Navbar extends Component {
                         <a className={'navbar-item custom-menu-item'} href={'/catalog'}>
                             สั่งซื้อสินค้า
                         </a>
+                        <a className={'navbar-item custom-menu-item'} href={'/paymentmethod'}>
+                            ช่องทางการชำระเงิน
+                        </a>
                         <a className={'navbar-item custom-menu-item'} href={'/contact'}>
                             ติดต่อเรา
                         </a>
