@@ -1,8 +1,14 @@
 import * as appContants from '../../../appConstants';
 
 const Utils = {
-    getProductImage(key) {
-        return appContants.imagePath.products[key];
+    getProductImg(key) {
+        return appContants.imgPath.products[key];
+    },
+    getLeaderboardBannerImg(key) {
+        return appContants.imgPath.leaderBoards[key];
+    },
+    getPopupBannerImg(img) {
+        return appContants.imgPath.popupBanner;
     }
 };
 

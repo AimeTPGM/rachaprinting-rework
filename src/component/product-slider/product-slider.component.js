@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import Utils from '../shared/services/util';
 class ProductSlider extends Component {
     renderImg(id) {
-        return (<img src={Utils.getProductImage('img' + id)}></img>);
+        return (<img src={Utils.getProductImg('img' + id)}></img>);
     }
     render () {
         const settings = {
