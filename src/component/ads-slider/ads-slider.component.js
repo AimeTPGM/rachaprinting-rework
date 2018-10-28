@@ -16,7 +16,7 @@ class AdsSlider extends Component {
             slidesToScroll: 1
         };
         const leaderBoards = [ {}, {}, {}, {}, {}]
-        return (<div className={'ads-wrapper white-bg'}>
+        return (<div className={'ads-wrapper'}>
             <Slider {...settings}>
                 {leaderBoards.map((value,key) => {
                    return <div>{this.renderImg(key+1)}</div>;

@@ -10,7 +10,8 @@ $mainColor: #00C300;
 }
 
 body {
-    background: $mainColor;
+    background: #FFF;
+    color: $mainColor;
     font-family: mainfont;
 }
 .wrapper {
@@ -27,10 +28,6 @@ body {
     }
 }
 
-.white-bg {
-    background: #FFF;
-    color: $mainColor;
-}
 .green-bg {
     background-image: linear-gradient(#65EF65, #229222);
     color: white;

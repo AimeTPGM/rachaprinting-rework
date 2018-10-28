@@ -3,13 +3,14 @@ import './App.css';
 import 'bulma';
 import './Lib.scss';
 import Navbar from './component/navbar/navbar.component';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ContactUs from './component/contact-us/contact-us.component';
 import Catalog from './component/catalog/catalog.component';
 import Home from './component/home/home.component';
 import Footer from './component/footer/footer.component';
 import FAQ from './component/faq/faq.component';
 import firebase from 'firebase';
+import Order from './component/order/order.component';
 
 class App extends Component {
   constructor(props){
@@ -33,6 +34,7 @@ class App extends Component {
           <Route exact path="/catalog" component={Catalog} />
           <Route exact path="/contact" component={ContactUs} />
           <Route exact path="/faq" component={FAQ} />
+          <Route path="/order" component={Order} />
           <Footer />
         </div>
       </Router>

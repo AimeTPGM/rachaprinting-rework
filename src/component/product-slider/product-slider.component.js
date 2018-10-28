@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Utils from '../shared/services/util';
+import './product-slider.style.scss';
 class ProductSlider extends Component {
     renderImg(id) {
         return (<img src={Utils.getProductImg('img' + id)}></img>);
@@ -13,16 +14,16 @@ class ProductSlider extends Component {
             slidesToShow: 1,
             speed: 500,
             rows: 2,
-            slidesPerRow: 2
+            slidesPerRow: 4
         };
         const products = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {},{}, {}, {}, {}, {}, {}, {}, {}, {}]
         return (
-            <div className={'white-bg'}>
+            <div className={''}>
                 <div className={'wrapper'}>
-                    <div class={'header'}>ผลิตภัณฑ์ของราชาการพิมพ์</div>
+                    <div className={'header'}>ผลิตภัณฑ์ของราชาการพิมพ์</div>
                     <Slider {...settings}>
                         {products.map((value,key) => {
-                            return <div>{this.renderImg(key+1)}</div>;
+                            return <div className={'product-slide'}><a href={'/order?productId='+(key + 1)}>{this.renderImg(key + 1)}</a></div>;
                         })}
                     </Slider>
                 </div>
