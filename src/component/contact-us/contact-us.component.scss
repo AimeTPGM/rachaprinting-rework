@@ -1,0 +1,36 @@
+h6 { font-size:1.4em }
+h5 { font-size:2.8em }
+h4 { font-size:4.2em }
+h3 { font-size:5.6em }
+h2 { font-size:7em }
+h1 { font-size:8.4em }
+.contact-title p { display: inline; color: black;}
+.contact-title h6 { display: inline;}
+.contact-title
+{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 20px;
+}
+
+.contact-body {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.contact-body p { display: inline;}
+.normaltext { color:black; }
+.highlight { color:#00C300; }
+
+.contact-footer
+{
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.contact-footer center{margin-bottom: 100px; }
+.contact-footer p {margin-bottom: 25px; color: black}
