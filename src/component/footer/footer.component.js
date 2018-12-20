@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './footer.component.scss'
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
 
     renderItemLink(item) {
-        return (<div className={'item'}><a href={item.itemLink}>{item.itemName}</a></div>);
+        return (<div className={'item'}><Link to={item.itemLink}>{item.itemName}</Link></div>);
     }
 
     renderItemWithoutLink(item) {
@@ -49,11 +50,11 @@ class Footer extends Component {
         return (
             <div className={'green-bg'}>
                 <div className={'wrapper'}>
-                    <div className={'link-wrapper'}> 
+                    <div className={'link-wrapper'}>
                         {footerData.map( (data,key) => {
                             return (<div className={'column'}>
                                     <div className={'header'}>{data.header}</div>
-                                    <div className={'item-wrapper'}> 
+                                    <div className={'item-wrapper'}>
                                         {data.items.map((item,key) => {
                                             return !!item.itemLink ? this.renderItemLink(item) : this.renderItemWithoutLink(item)
                                         })}
@@ -62,7 +63,7 @@ class Footer extends Component {
                         })}
                     </div>
                     <div className={'license-wrapper'}>{'©2017 Racha Printing Co., Ltd. All Rights Reserved.'}</div>
-                    
+
                 </div>
             </div>
         );
